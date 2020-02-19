@@ -25,7 +25,7 @@ t1 = BashOperator(
 t2 = BashOperator(
     task_id="print_data", 
     bash_command="cat /usr/local/airflow/data/year={{ execution_date.year }}/rocket={{ params.rocket }}/data.csv", 
-    params={"rocket": "all"},
+    params={"rocket": "all"}, # falcon1/falcon9/falconheavy
     dag=dag
 )
 
